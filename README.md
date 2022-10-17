@@ -2,7 +2,7 @@
 
 A simple in-memory cache for node.js
 
-There are no type limitations. You can cache every type.
+There are no type limitations. You can cache almost everything.
 
 ## Installation
 
