@@ -27,6 +27,8 @@ console.log(cache.get('key'));
 
 Stores value with given key
 
+**Caution**: This overrides existing value
+
 ### del
 
 Deletes value with given key

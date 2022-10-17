@@ -9,7 +9,6 @@ export class CacheManager {
   private cache: Cache = {};
 
   set(key: string, value: any, ttl?: number): boolean {
-    if (this.cache[key]) throw new Error('duplicated key');
     this.cache[key] = { value };
     if (ttl) this.expire(key, ttl);
     return true;
