@@ -37,7 +37,7 @@ export class CacheManager {
   private async deleteAfterTtl(key: string, ttl: number) {
     try {
       await new Promise<void>((resolve) => {
-        setTimeout(() => resolve(), 1000 * ttl);
+        setTimeout(resolve, 1000 * ttl);
       });
       if (this.cache[key].ttl === ttl) delete this.cache[key];
     } catch {}
