@@ -13,7 +13,7 @@ npm i simple-node-cache
 ## How to use?
 
 ```tsx
-import { CacheManager } from './cache';
+import { CacheManager } from 'simple-node-cache';
 
 const cache = new CacheManager();
 
