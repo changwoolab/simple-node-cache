@@ -7,6 +7,7 @@ interface Cache {
 
 export class CacheManager {
   private cache: Cache = {};
+
   set(key: string, value: any, ttl?: number): boolean {
     if (this.cache[key]) throw new Error('duplicated key');
     this.cache[key] = { value };
@@ -15,23 +16,35 @@ export class CacheManager {
   }
 
   del(key: string): boolean {
-    try {
-      delete this.cache[key];
-      return true;
-    } catch (e) {
-      throw e;
-    }
+    delete this.cache[key];
+    return true;
   }
 
   expire(key: string, ttl: number): boolean {
-    if (!this.cache[key]) return false;
-    this.cache[key].ttl = ttl;
-    this.deleteAfterTtl(key, ttl);
-    return true;
+    try {
+      this.cache[key].ttl = ttl;
+      this.deleteAfterTtl(key, ttl);
+      return true;
+    } catch {
+      return false;
+    }
   }
 
   get(key: string): any {
     return this.cache[key] ? this.cache[key].value : undefined;
+  }
+
+  clear(): boolean {
+    this.cache = {};
+    return true;
+  }
+
+  size(): number {
+    return Object.keys(this.cache).length;
+  }
+
+  keys(): string[] {
+    return Object.keys(this.cache);
   }
 
   private async deleteAfterTtl(key: string, ttl: number) {

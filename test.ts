@@ -9,14 +9,14 @@ async function wait(ttl: number) {
 }
 
 async function main() {
-  cache.set('asdf', 1, 3);
+  cache.set('asdf', 1);
+  cache.del('ffffff');
   console.log(cache.get('asdf'));
   cache.set('ssss', 1);
-  cache.expire('ssss', 0);
-  await wait(0);
-  console.log(cache.get('ssss'));
-  console.log(cache.get('asdf'))
-  await wait(3);
+  console.log(cache.keys());
+  cache.clear();
   console.log(cache.get('asdf'));
+  console.log(cache.size());
+  console.log(cache.keys());
 }
-main()
+main();

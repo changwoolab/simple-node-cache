@@ -1,11 +1,17 @@
 {
-  "name": "funny",
-  "version": "1.0.0",
-  "description": "",
+  "name": "simple-node-cache",
+  "version": "1.0.1",
+  "description": "simple in-memory cache for node.js",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "changwoolab <cwyoo01@naver.com>",
+  "license": "ISC",
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "cache.js",
+    "cache.d.ts"
+  ]
 }
