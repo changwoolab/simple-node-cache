@@ -31,11 +31,11 @@ Stores value with given key
 
 Deletes value with given key
 
-### expire (key, ttl)
+### expire
 
 Set Time To Live in seconds
 
-### get (key)
+### get
 
 Get value by given key
 
