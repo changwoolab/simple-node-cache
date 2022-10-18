@@ -1,6 +1,6 @@
 {
   "name": "simple-node-cache",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "simple in-memory cache for node.js",
   "main": "index.js",
   "scripts": {
@@ -28,8 +28,8 @@
     "in-memory",
     "memory"
   ],
-  "homepage": "https://github.com/changwoolab/simple-cache",
+  "homepage": "https://github.com/changwoolab/simple-node-cache",
   "bugs": {
-    "url": "https://github.com/changwoolab/simple-cache"
+    "url": "https://github.com/changwoolab/simple-node-cache"
   }
 }
